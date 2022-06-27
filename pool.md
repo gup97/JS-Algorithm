@@ -33,5 +33,11 @@
             result[name1][n]으로 접근가능
         같은 {}내에 있어야 주소로 참조 가능
         ->reduce로 처음부터 다 정의하는거 이쁨
-    2. 
-            
+
+## 22.06.24
+    - 여행경로 
+    1. 객체에서의 반환값 ticketMap.get(ticName)에서
+            ([ [ 'ATL' ], [ 'SFO' ] ])   ->
+            ([])
+            ticketMap.get(ticName).length가 안되서 발생
+        객체에 [[],[]] 형태에서 []가 되면 object가됨

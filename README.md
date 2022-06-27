@@ -25,8 +25,8 @@
                             실패
 
     level-2 문제
-    level-2 실패 kakao 문자열 압축      
-
+    level-2 실패 -1 kakao 문자열 압축      
+    level-2 실패 -1 고득점kitDFS 여행경로                 
 
 ## 22.06.24 
     + level-2 오픈채팅방        
@@ -39,7 +39,7 @@
 
 ## 22.06.24
     + level-1 나누어 떨어지는 숫자 배열
-    + level-2 타겟넘버                      DFS
-
+    + level-2 타겟넘버                      
+    + level-2 여행경로                      
 
     
