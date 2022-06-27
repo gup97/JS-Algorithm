@@ -18,7 +18,10 @@
 
                         -level-2 문제-
 
-    level-2 성공 -1 kakao           오픈채팅방        
+    level-2 성공 -1 kakao           오픈채팅방 
+    level-2 성공 -1 고득점kitDFS    타겟넘버                     
+
+
                             실패
 
     level-2 문제
@@ -36,6 +39,7 @@
 
 ## 22.06.24
     + level-1 나누어 떨어지는 숫자 배열
+    + level-2 타겟넘버                      DFS
 
 
     
