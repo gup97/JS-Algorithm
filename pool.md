@@ -41,5 +41,8 @@
             ([])
             ticketMap.get(ticName).length가 안되서 발생
         객체에 [[],[]] 형태에서 []가 되면 object가됨
-## 22.06.30
+## 22.06.29
     BFS,DFS 에서 자꾸 막힘 개념공부 다시
+## 22.06.30
+    반복문에서 연산과 동시에 참조  
+    return count + ((budget -= price) >= 0);
