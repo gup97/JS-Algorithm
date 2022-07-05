@@ -8,30 +8,29 @@ const action = arr.map((el) => {
   return el.split(" ");
 });
 const queue = [];
-let target = 0;
 let result = "";
 action.forEach((act) => {
-  const isEmpty = (arr, target) => {
-    return arr.length - target === 0 ? true : false;
+  const isEmpty = (arr) => {
+    return arr.length === 0 ? true : false;
   };
   switch (act[0]) {
     case "push":
       queue.push(act[1]);
       break;
     case "pop":
-      result += `${isEmpty(queue, target) ? -1 : queue[target++]}\n`;
+      result += `${isEmpty(queue) ? -1 : queue.shift()}\n`;
       break;
     case "size":
-      result += `${queue.length - target}\n`;
+      result += `${queue.length}\n`;
       break;
     case "empty":
-      result += `${isEmpty(queue, target) ? 1 : 0}\n`;
+      result += `${isEmpty(queue) ? 1 : 0}\n`;
       break;
     case "front":
-      result += `${isEmpty(queue, target) ? -1 : queue[target]}\n`;
+      result += `${isEmpty(queue) ? -1 : queue[0]}\n`;
       break;
     case "back":
-      result += `${isEmpty(queue, target) ? -1 : queue[queue.length - 1]}\n`;
+      result += `${isEmpty(queue) ? -1 : queue[queue.length - 1]}\n`;
       break;
   }
 });
