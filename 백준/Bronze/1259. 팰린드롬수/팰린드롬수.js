@@ -13,7 +13,10 @@ for (const text of input) {
   const _text = text.split("");
   let flag = "yes";
   while (_text.length > 1) {
-    if (_text.pop() !== _text.shift()) flag = "no";
+    if (_text.pop() !== _text.reverse().pop()) {
+      flag = "no";
+      break;
+    }
   }
   result.push(flag);
 }
