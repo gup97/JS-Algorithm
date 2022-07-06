@@ -1,5 +1,5 @@
 const fs = require("fs");
-const filePath = "/dev/stdin";
+const filePath = "/dev/stdin"
 
 const [input, ...arr] = fs
   .readFileSync(filePath)
@@ -8,4 +8,4 @@ const [input, ...arr] = fs
   .split(/\n/)
   .map(Number);
 
-console.log(arr.sort((a, b) => a - b).join("\n"));
+console.log([...new Set(arr)].sort((a, b) => a - b).join("\n"));
