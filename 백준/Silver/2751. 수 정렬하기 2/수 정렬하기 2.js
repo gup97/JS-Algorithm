@@ -1,11 +1,7 @@
-const fs = require("fs");
-const filePath = "/dev/stdin"
+const fs = require('fs');
+const inputData = fs.readFileSync(0, 'utf8').toString().trim().split("\n").map(Number);
 
-const [input, ...arr] = fs
-  .readFileSync(filePath)
-  .toString()
-  .trim()
-  .split(/\n/)
-  .map(Number);
+const N = inputData.shift()
 
-console.log([...new Set(arr)].sort((a, b) => a - b).join("\n"));
+const result = inputData.sort((a, b) => a - b);
+console.log(result.join('\n'));
