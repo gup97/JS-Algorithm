@@ -4,16 +4,18 @@ const filePath =
 const n = +fs.readFileSync(filePath).toString().trim();
 
 (function solution(n) {
-    function elementSum(v) {
+    function decomposition(v) {
         return v
             .toString()
             .split("")
-            .reduce((a, b) => +a + +b, 0);
+            .reduce((acc, cur) => +acc + +cur, 0);
     }
-    const decomposition = Array.from({ length: n + 1 }, (_, i) => i).map(
-        (v) => v + elementSum(v)
-    );
-    decomposition.includes(n)
-        ? console.log(decomposition.indexOf(n))
-        : console.log(0);
+    let result = 0;
+    for (let i = 0; i <= n; i++) {
+        if (i + decomposition(i) === n) {
+            result = i;
+            break;
+        }
+    }
+    console.log(result);
 })(n);
