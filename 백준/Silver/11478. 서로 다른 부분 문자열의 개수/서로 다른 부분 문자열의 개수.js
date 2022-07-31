@@ -1,14 +1,12 @@
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : `${__dirname}/input.txt`;
-const input = fs.readFileSync(filePath).toString().trim().split("");
+const input = fs.readFileSync(filePath).toString().trim();
 (function name(params) {
-    const result = {};
-    for (let i = 0; i < params.length; i++) {
-        let str = "";
-        for (let j = i; j < params.length; j++) {
-            str += params[j];
-            result[str] = true;
+    const answer = new Set([...params]);
+    for (let i = 1; i < params.length; i++) {
+        for (let j = 0; j < params.length - i; j++) {
+            answer.add(params.slice(j, j + i + 1));
         }
     }
-    console.log(Object.keys(result).length);
+    console.log(answer.size);
 })(input);
