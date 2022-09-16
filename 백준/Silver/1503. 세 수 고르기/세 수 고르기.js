@@ -6,19 +6,18 @@ const [N, S] = input1.split(" ").map(Number);
 
 function sol() {
     const numList = new Map();
+    const list = new Array(1002).fill(0);
     if (S !== 0) {
-        const list = input2.split(" ").map(Number);
-        list.forEach((v) => numList.set(v, true));
+        const nums = input2.split(" ").map(Number);
+        for (const n of nums) list[n] = 1;
     }
     let result = Infinity;
     for (let i = 1; i <= 1000; i++) {
-        if (numList.has(i)) continue;
+        if (list[i]) continue;
         for (let j = i; j <= 1000; j++) {
-            if (numList.has(j)) continue;
-
+            if (list[j]) continue;
             for (let k = j; k <= 1001; k++) {
-                if (numList.has(k)) continue;
-
+                if (list[k]) continue;
                 const sum = Math.abs(N - i * j * k);
                 result = Math.min(result, sum);
             }
